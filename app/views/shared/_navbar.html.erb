@@ -1,0 +1,42 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <i class="fas fa-glass-martini-alt" id="icon-navbar"></i>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active mt-1">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item active mt-1">
+          <%= link_to "Bookings", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <button type="button" class="btn-bartender">
+            <%= link_to "Become a bartender", "#", class: "nav-link" %>
+          </button>
+        </li>
+        <li class="nav-item dropdown mt-1 ml-1">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/AugustWanger", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Profile", "#", class: "dropdown-item" %>
+            <%= link_to "Settings", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <button type="button" class="btn btn-login">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </button>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
