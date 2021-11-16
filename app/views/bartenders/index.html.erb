@@ -1,12 +1,19 @@
 <div class="container">
-  <div class="row">
-    <h1>All our Bartenders:</h1>
-    <% @bartenders.each do |bartender| %>
-    <p>Bartender id:<%= bartender.id %></p>
-    <p>Name:<%= bartender.user.first_name %></p>
-    <p>Located in:<%= bartender.city %></p>
-    <p>About the bartender:<%= bartender.description %></p>
-    <p><%= link_to "Show", bartender_path(bartender.id) %></p>
-    <% end %>
+  <div class="row justify-content-center">
+  <div class="col-8">
+      <h1>All our Bartenders:</h1>
+        <% @bartenders.each do |bartender| %>
+      <div class="bartender-card">
+        <div class="image">
+          <%= image_tag "bar.jpg" %>
+        </div>
+        <p>Bartender id: <%= bartender.id %></p>
+        <p>Name: <%= bartender.user.first_name %></p>
+        <p>Located in: <%= bartender.city %></p>
+        <p>About the bartender:<%= bartender.description %></p>
+        <p><%= link_to "Show", bartender_path(bartender.id) %></p>
+      </div>
+        <% end %>
+    </div>
   </div>
 </div>
