@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: #f8f9fa;
   height: 65px;
 }
 
@@ -13,24 +13,23 @@
 }
 
 #icon-navbar {
-  color: rgb(228, 17, 27);
+  color: $red;
   margin-left: 25px;
 }
 
 .btn-bartender {
   padding: 4px;
-  border: 1px;
-  border-radius: 4px;
-  margin-right: 8px;
-  background-color: aquamarine;
+  border-style: solid;
+  border-color: $red;
+  border-radius: 8px;
   color: white;
 }
 
 .btn-login {
   padding: 4px;
   border-style: solid;
-  border-color: grey;
+  border-color: $red;
   border-radius: 8px;
-  background-color: white;
   width: 80px;
+  color: white;
 }
