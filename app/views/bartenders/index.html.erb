@@ -1,11 +1,12 @@
-<div class="container"></div>
-<div class="row"></div>
-
-<h1>All our Bartenders:</h1>
-<% @bartenders.each do |bartender| %>
-<p>Bartender id:<%= bartender.id %></p>
-<p>Name:<%= bartender.user.first_name %></p>
-<p>Located in:<%= bartender.city %></p>
-<p>About the bartender:<%= bartender.description %></p>
-<p><%= link_to "Show", bartender_path(bartender.id) %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <h1>All our Bartenders:</h1>
+    <% @bartenders.each do |bartender| %>
+    <p>Bartender id:<%= bartender.id %></p>
+    <p>Name:<%= bartender.user.first_name %></p>
+    <p>Located in:<%= bartender.city %></p>
+    <p>About the bartender:<%= bartender.description %></p>
+    <p><%= link_to "Show", bartender_path(bartender.id) %></p>
+    <% end %>
+  </div>
+</div>
