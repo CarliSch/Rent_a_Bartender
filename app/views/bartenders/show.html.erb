@@ -1,8 +1,5 @@
 
  <h1>Details on a Bartender</h1>
-
-<%= cl_image_tag @bartender.photo.key, height: 300, width: 400, crop: :fill  %>
-
 <div class="container my-5 pb-5 entire-card">
   <div class="row justify-content-center">
     <div class="col-8">
@@ -22,13 +19,25 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% if @bartender.photo.attached? %>
+                  <%= cl_image_tag @bartender.photo.key, class:"d-block h-100 "  %>
+                <% else %>
+                  <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% end %>
               </div>
               <div class="carousel-item">
-                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% if @bartender.photo.attached? %>
+                  <%= cl_image_tag @bartender.photo.key, class:"d-block h-100 "  %>
+                <% else %>
+                  <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% end %>
               </div>
               <div class="carousel-item">
-                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% if @bartender.photo.attached? %>
+                  <%= cl_image_tag @bartender.photo.key, class:"d-block h-100 "  %>
+                <% else %>
+                  <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% end %>
               </div>
             </div>
 
@@ -38,7 +47,4 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
-=======
 <%= link_to "Back", bartenders_path, class: "btn btn-primary" %>
->>>>>>> 80643fec1b3e3c5b95408f41333c9ed319f058f5
