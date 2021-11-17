@@ -7,4 +7,12 @@ class BartendersController < ApplicationController
   def show
     @bartender = Bartender.find(params[:id])
   end
+
+  def new
+    @bartender = Bartender.new
+  end
+
+  def create
+    
+  end
 end

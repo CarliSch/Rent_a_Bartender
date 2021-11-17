@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row align-items-center">
+    <div class="column col-8">
+      <h1>Start your bartender journey below!</h1>
+        <%= simple_form_for(@bartender) do |f| %>
+          <%= f.input :city %>
+          <%= f.input :description %>
+        <% end %>
+    </div>
+  </div>
+</div>
