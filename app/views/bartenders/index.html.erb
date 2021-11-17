@@ -1,19 +1,22 @@
 <div class="row justify-content-center">
   <h1>All our Bartenders:</h1>
 </div>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-3">
-      <% @bartenders.each do |bartender| %>
-        <div class="bartender-card" style="width: 18rem;">
-          <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= bartender.user.first_name %></p></h5>
-            <p class="card-text">Located in: <%= bartender.city %></p>
-            <a href="/bartender/:id" class="btn btn-primary">Take a look</a>
-          </div>
+  <div id="map"
+    style="width: 100%; height: 370px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+<div class="container mt-5">
+  <div class="cards">
+    <% @bartenders.each do |bartender| %>
+      <div class="bartender-card">
+        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= bartender.user.first_name %></p></h5>
+          <p class="card-text">Located in: <%= bartender.city %></p>
+          <%= link_to "Take a look", bartender_path(bartender.id), class: "btn btn-primary" %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
