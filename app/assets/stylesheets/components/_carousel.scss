@@ -15,12 +15,20 @@ a {
 
 a:hover {
   color: white;
-  opacity: 70%;
-  text-decoration: underline;
+  opacity: 90%;
+  text-decoration: none;
 }
 
 .carousel-caption {
   color: white;
   font-size: 60px;
   margin-bottom: 200px;
+}
+
+strong {
+  color: $red;
+}
+
+strong:hover {
+  text-decoration: underline white;
 }
