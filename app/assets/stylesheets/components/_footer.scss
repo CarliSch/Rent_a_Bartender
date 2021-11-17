@@ -2,8 +2,11 @@
   padding:40px 0;
   background-color: $blue;
   color:#fcfdfd;
-  height: 80px;
+  height: 150px;
   border-top: 1px solid white;
+  position: absolute;
+ bottom: 0;
+ width: 100%;
 }
 
 .footer-basic ul {
@@ -59,10 +62,4 @@
   font-size:13px;
   color:#aaa;
   margin-bottom:0;
-}
-
-footer {
- position: absolute;
- bottom: 0;
- width: 100%;
 }
