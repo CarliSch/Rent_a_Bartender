@@ -1,12 +1,22 @@
-<div class="container">
-  <div class="row">
-    <h1>All our Bartenders:</h1>
+<div class="row justify-content-center">
+  <h1>All our Bartenders:</h1>
+</div>
+  <div id="map"
+    style="width: 100%; height: 370px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+<div class="container mt-5">
+  <div class="cards">
     <% @bartenders.each do |bartender| %>
-    <p>Bartender id:<%= bartender.id %></p>
-    <p>Name:<%= bartender.user.first_name %></p>
-    <p>Located in:<%= bartender.city %></p>
-    <p>About the bartender:<%= bartender.description %></p>
-    <p><%= link_to "Show", bartender_path(bartender.id) %></p>
+      <div class="bartender-card">
+        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= bartender.user.first_name %></p></h5>
+          <p class="card-text">Located in: <%= bartender.city %></p>
+          <%= link_to "Take a look", bartender_path(bartender.id), class: "btn btn-primary" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
