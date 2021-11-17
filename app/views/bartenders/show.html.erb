@@ -1,3 +1,41 @@
+
  <h1>Details on a Bartender</h1>
 
 <%= cl_image_tag @bartender.photo.key, height: 300, width: 400, crop: :fill  %>
+
+<div class="container my-5 pb-5 entire-card">
+  <div class="row justify-content-center">
+    <div class="col-8">
+        <div class="card-show text-center">
+          <div class="card-show-body text-center">
+            <h5 class="card-show-description">Description :<%= @bartender.description %></h5>
+            <p class="card-text"><strong><%= @bartender.user.first_name + " " + @bartender.user.last_name %></strong> is from <%= @bartender.city%>
+        & their favourite drink is <%= @bartender.user.favorite_drink %> ;</p>
+            <p class="card-text"><small class="text-muted">Contact: <%= @bartender.user.email %></small></p>
+          </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+

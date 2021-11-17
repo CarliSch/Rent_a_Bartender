@@ -9,20 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_pack_tag 'application' %>
   </head>
 
-<div class=”main-container”>
   <body>
-    <header>
+    <div class="main-container">
       <%= render 'shared/navbar' %>
-    </header>
       <%= render 'shared/flashes' %>
-    <section>
       <%= yield %>
-    </section>
-  <footer>
-    <%= render 'shared/footer' %>
-  </footer>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
-</div>
+
 </html>

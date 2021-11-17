@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_11_17_112242) do
 
   # These are extensions that must be enabled in order to support this database
@@ -42,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_11_17_112242) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_bartenders_on_user_id"
   end
 
@@ -65,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_11_17_112242) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "favorite_drink"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
