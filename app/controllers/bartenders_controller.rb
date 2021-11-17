@@ -20,6 +20,18 @@ class BartendersController < ApplicationController
   end
 
   def create
-    
+    @bartender = Bartender.new(bartender_params)
+    @bartender.user = current_user
+    if @bartender.save
+      redirect_to bartender_path(@bartender)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def bartender_params
+  params.require(:bartender).permit(:city, :description, :photo)
   end
 end
