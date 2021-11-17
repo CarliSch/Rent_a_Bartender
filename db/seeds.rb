@@ -22,8 +22,8 @@ puts "Users created"
 
 puts "Create Bartenders"
 bartender1 = Bartender.create!(user_id: carl.id, city: "Munich", description: "How does the computer know?")
-bartender2 = Bartender.create!(user_id: august.id, city: "Stockholm", description: "I played drums in front of the queen")
-bartender3 = Bartender.create!(user_id: ruben.id, city: "Berlin", description: "Damn straight!")
+bartender2 = Bartender.create!(user_id: august.id, city: "Stockholm", description: "Damn straight!")
+bartender3 = Bartender.create!(user_id: ruben.id, city: "Berlin", description: "I did not play drums in front of the queen either.")
 bartender4 = Bartender.create!(user_id: pauli.id, city: "Cologne", description: "I did not play drums in front of the queen either.")
 bartender5 = Bartender.create!(user_id: eva.id, city: "Paris", description: "I meditate a lot.")
 bartender6 = Bartender.create!(user_id: claire.id, city: "Bordeaux", description: "I'm going to Tahiti.")

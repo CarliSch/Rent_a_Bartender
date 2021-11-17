@@ -1,1 +1,3 @@
-<h2><%= bartender.user.first_name %></h2>
+
+<p><%= bartender.user.first_name %></p>
+<%= link_to "Take a look", bartender_path(bartender.id), class:"btn btn-primary" %>
