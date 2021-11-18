@@ -8,12 +8,13 @@
 <div class="container mt-5">
   <div class="cards">
     <% @bartenders.each do |bartender| %>
-      <div class="bartender-card">
-        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
-        <div class="card-body">
-          <h5 class="card-title"><%= bartender.user.first_name %></p></h5>
-          <p class="card-text">Located in: <%= bartender.city %></p>
-          <%= link_to "Take a look", bartender_path(bartender.id), class: "btn btn-primary" %>
+      <div class="card shadow-sm border-0 rounded">
+        <div class="card-body p-0"><img src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg" alt="" class="w-100 card-img-top">
+          <div class="p-4">
+            <h5 class="mb-0"><%= bartender.user.first_name %></h5>
+            <p class="small text-muted"><%= bartender.city %></p>
+            <%= link_to "Take a look", bartender_path(bartender.id), class:"btn button-80" %>
+          </div>
         </div>
       </div>
     <% end %>
