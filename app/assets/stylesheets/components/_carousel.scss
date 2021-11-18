@@ -26,10 +26,14 @@ a:hover {
   height: 80vh;
 }
 
-strong {
+a strong {
   color: $red;
 }
 
-strong:hover {
+a strong:hover {
   text-decoration: underline white;
+}
+
+h1 strong {
+  color: $red;
 }
