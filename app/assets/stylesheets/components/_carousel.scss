@@ -27,7 +27,15 @@ a:hover {
 
 .carousel-item{
   text-align: center;
-  height: 60vh;
+  height: 80vh;
+}
+
+strong {
+  color: $red;
+}
+
+strong:hover {
+  text-decoration: underline white;
 }
 
 strong {
