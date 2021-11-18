@@ -2,7 +2,7 @@
     <h1>All current bookings:</h1>
   <div class="cards">
     <% @bookings.each do |booking| %>
-      <div class="booking-card">
+      <div class="card">
         <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
         <div class="card-body">
           <h5 class="card-title"><%= booking.bartender.user.first_name %></p></h5>
