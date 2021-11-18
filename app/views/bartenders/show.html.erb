@@ -7,7 +7,7 @@
           <div class="card-show-body text-center">
             <h5 class="card-show-description">Description :<%= @bartender.description %></h5>
             <p class="card-text"><strong><%= @bartender.user.first_name + " " + @bartender.user.last_name %></strong> is from <%= @bartender.city%>
-        & their favourite drink is <%= @bartender.user.favorite_drink %> ;</p>
+            & their favourite drink is <%= @bartender.user.favorite_drink %> ;</p>
             <p class="card-text"><small class="text-muted">Contact: <%= @bartender.user.email %></small></p>
           </div>
 
@@ -42,7 +42,7 @@
             </div>
 
           </div>
-
+          <%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded"%>
         </div>
     </div>
   </div>
