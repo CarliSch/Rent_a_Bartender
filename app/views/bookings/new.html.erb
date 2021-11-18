@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="column col-8">
+      <h1>Create a new booking!</h1>
+        <%= simple_form_for [@bartender, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <div class="form-actions">
+            <%= f.button :submit, "Create booking", class:"col btn btn-dark-moon btn-rounded" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
