@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: white;
+  background-color: $gray;
   height: 65px;
 }
 
@@ -20,8 +20,8 @@
 .btn-bartender {
   padding: 4px;
   border-style: solid;
-  border-color: #7E78D2;
-  background-color: white;
+  border-color: $beige;
+  background-color: $gray;
   border-radius: 8px;
   color: white;
 }
@@ -29,12 +29,16 @@
 .btn-login {
   padding: 4px;
   border-style: solid;
-  border-color: grey;
+  border-color: $white;
   border-radius: 8px;
   width: 80px;
   color: white;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: black;
+.navbar-light .navbar-nav .active > .nav-link {
+  color: $white;
+}
+
+.navbar-light  .navbar-nav .nav-link {
+  color: $white;
 }
