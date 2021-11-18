@@ -1,3 +1,4 @@
+
 <div class="container">
   <div id="bartenders-show">
     <div class="row justify-content-center">
@@ -7,6 +8,7 @@
           <div>
             <h2><%= @bartender.user.first_name %></h2>
             <%= @bartender.description %>
+
           </div>
           <h2 class="card-trip-pricing"><%= @bartender.city %></h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
@@ -29,11 +31,9 @@
             <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
+
       </div>
       <div class="card-august">
         <h3>Description</h3>
         <%= @bartender.description %>
       </div>
-    </div>
-  </div>
-</div>
