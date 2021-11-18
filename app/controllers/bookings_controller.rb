@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
     @bartender = Bartender.find(params[:bartender_id])
@@ -11,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.bartender = @bartender
     if @booking.save
-      redirect_to bartender_path(@bartender)
+      redirect_to bookings_path(@bartender)
     else
       render :new
     end
