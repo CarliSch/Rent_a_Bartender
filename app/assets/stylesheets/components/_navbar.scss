@@ -17,13 +17,16 @@
   margin-left: 25px;
 }
 
-.btn-bartender {
-  padding: 4px;
+.btn-bartender-home {
   border-style: solid;
   border-color: $beige;
   background-color: $gray;
-  border-radius: 8px;
   color: white;
+}
+
+.btn-bartender  {
+  padding: 4px;
+  border-radius: 8px;
 }
 
 .btn-login {

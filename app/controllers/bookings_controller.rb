@@ -1,7 +1,13 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @host = current_user.bartenders.any?
+    @bookings = current_user.bookings
+    if @host
+      @my_requests = current_user.bartenders
+      @my_bookings = Booking.where(bartender_id: @my_requests.pluck(:id))
+    end
   end
 
   def new
@@ -15,7 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.bartender = @bartender
     if @booking.save
-      redirect_to bookings_path(@bartender)
+      redirect_to bookings_path
     else
       render :new
     end
