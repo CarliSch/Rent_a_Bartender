@@ -5,7 +5,7 @@
         <%= simple_form_for(@bartender) do |f| %>
           <%= f.input :city %>
           <%= f.input :description %>
-          <%= f.input :photo, as: :file %>
+          <%= f.input :photo, as: :file, multiple: true %>
           <div class="form-actions">
             <%= f.button :submit, "Create profile", class:"col btn btn-dark-moon btn-rounded" %>
           </div>

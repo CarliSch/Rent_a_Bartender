@@ -1,7 +1,17 @@
 class BartendersController < ApplicationController
-
   def index
-    @bartenders = Bartender.all
+    if params[:query].present?
+      sql_query = " \
+        bartenders.city @@ :query \
+        OR bartenders.description @@ :query \
+        OR users.first_name @@ :query \
+        OR users.last_name @@ :query \
+      "
+      @bartenders = Bartender.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bartenders = Bartender.all
+    end
+
     @markers = @bartenders.geocoded.map do |bartender|
       {
         lat: bartender.latitude,
