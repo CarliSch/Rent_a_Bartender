@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <i class="fas fa-glass-martini-alt" id="icon-navbar">Rent a bartender</i>
   <% end %>
 
@@ -18,7 +18,7 @@
           <%= link_to "Bookings", "#", class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <button type="button" class="btn-bartender">
+          <button type="button" class="btn-bartender btn-bartender-home">
             <%= link_to "Become a bartender", new_bartender_path, class: "nav-link" %>
           </button>
         </li>
