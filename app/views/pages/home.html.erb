@@ -3,51 +3,112 @@
         <div class="carousel-item active">
           <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block w-100 banner-image"%>
           <div class="carousel-caption">
-            <a href="/bartenders">Show <strong>bartenders</strong></a>
+
+
+                <div class="row justify-content-center">
+                  <div class="column col-4">
+                      <%= form_tag bartenders_path, class:"form-inline search-bar", method: :get do %>
+                        <%= text_field_tag :query,
+                          params[:query],
+                          class: "form-control",
+                          placeholder: "Find a Bartender"
+                        %>
+                        <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+                      <% end %>
+                  </div>
+                </div>
+
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag "bartender.jpg", class:"d-block w-100 banner-image", :alt => "Picture of a bartender in action" %>
           <div class="carousel-caption">
-            <a href="/bartenders">Show <strong>bartenders</strong></a>
+
+
+                <div class="row justify-content-center">
+                  <div class="column col-4">
+                      <%= form_tag bartenders_path, class:"form-inline search-bar", method: :get do %>
+                        <%= text_field_tag :query,
+                          params[:query],
+                          class: "form-control",
+                          placeholder: "Find a Bartender"
+                        %>
+                        <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+                      <% end %>
+                  </div>
+                </div>
+
+
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag "bottles.jpg", class:"d-block w-100 banner-image", :alt => "picture of bar with no people" %>
           <div class="carousel-caption">
-            <a href="/bartenders">Show <strong>bartenders</strong></a>
+
+
+                <div class="row justify-content-center">
+                  <div class="column col-4">
+                      <%= form_tag bartenders_path, class:"form-inline search-bar", method: :get do %>
+                        <%= text_field_tag :query,
+                          params[:query],
+                          class: "form-control",
+                          placeholder: "Find a Bartender"
+                        %>
+                        <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+                      <% end %>
+                  </div>
+                </div>
+
+
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag "shadows-of-bottles.jpg", class:"d-block w-100 banner-image", :alt => "picture of bar with no people" %>
           <div class="carousel-caption">
-            <a href="/bartenders">Show <strong>bartenders</strong></a>
+
+
+                <div class="row justify-content-center">
+                  <div class="column col-4">
+                      <%= form_tag bartenders_path, class:"form-inline search-bar", method: :get do %>
+                        <%= text_field_tag :query,
+                          params[:query],
+                          class: "form-control",
+                          placeholder: "Find a Bartender"
+                        %>
+                        <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+                      <% end %>
+                  </div>
+                </div>
+
+
           </div>
         </div>
       </div>
   </div>
+
 <div class="container justify-content-center">
   <h1>Top rated bartenders</h1>
 </div>
-<div class="container mt-5">
- <div class="row pb-5 mb-4">
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-      <!-- Card-->
-      <div class="card shadow-sm border-0 rounded">
-        <div class="card-body p-0"><img src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg" alt="" class="w-100 card-img-top">
-          <div class="p-4">
-            <h5 class="mb-0">August Wanger</h5>
-            <p class="small text-muted">Bartender</p>
-            <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
+  <div class="justify-content-center"><a href="/bartenders">Show <strong>bartenders</strong></a></div>
+  <div class="container mt-5">
+  <div class="row pb-5 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card shadow-sm border-0 rounded">
+          <div class="card-body p-0"><img src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg" alt="" class="w-100 card-img-top">
+            <div class="p-4">
+              <h5 class="mb-0">August Wanger</h5>
+              <p class="small text-muted">Bartender</p>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
       <!-- Card-->
@@ -100,23 +161,6 @@
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="column col-4">
-      <div class="form-inline search-bar">
-        <%= form_tag bartenders_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a Bartender"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
       </div>
     </div>
   </div>
