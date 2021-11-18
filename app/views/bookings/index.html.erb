@@ -1,1 +1,16 @@
-<h1>All your current bookings</h1>
+<div class="container mt-5">
+    <h1>All current bookings:</h1>
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+      <div class="booking-card">
+        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= booking.bartender.user.first_name %></p></h5>
+          <p class="card-text">Start: <%= booking.start_date %></p>
+          <p class="card-text">Until: <%= booking.end_date %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to "Back to all Bartenders", bartenders_path, class: "btn btn-primary" %>
