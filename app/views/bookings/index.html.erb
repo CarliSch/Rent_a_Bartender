@@ -3,11 +3,16 @@
   <div class="cards">
     <% @bookings.each do |booking| %>
       <div class="card">
-        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+          <% if booking.bartender.photo.attached? %>
+                  <%= cl_image_tag booking.bartender.photo.key, class:"card-img-top"  %>
+                <% else %>
+                  <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"card-img-top"%>
+                <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= booking.bartender.user.first_name %></p></h5>
           <p class="card-text">Start: <%= booking.start_date %></p>
           <p class="card-text">Until: <%= booking.end_date %></p>
+          <p class="card-text">Status: <%= booking.status %></p>
         </div>
       </div>
     <% end %>
@@ -15,15 +20,18 @@
   <div class="headers"><h1 class=mt-4>My booking requests:</h1></div>
   <div class="cards">
     <% if @my_bookings %>
-      <% @my_bookings.each do |request| %>
-        <div class="card">
-          <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= request.bartender.user.first_name %></p></h5>
-            <p class="card-text">Start: <%= request.start_date %></p>
-            <p class="card-text">Until: <%= request.end_date %></p>
-          </div>
+    <% @my_bookings.each do |request| %>
+      <div class="card">
+        <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= request.bartender.user.first_name %></p></h5>
+          <p class="card-text">Start: <%= request.start_date %></p>
+          <p class="card-text">Until: <%= request.end_date %></p>
+          <p class="card-text">Status: <%= request.status %></p>
+          <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", remote: true%>
+          <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
         </div>
+      </div>
       <% end %>
     <% else %>
     no bookings yet
