@@ -11,12 +11,19 @@
                 <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= booking.bartender.user.first_name %></p></h5>
-          <p class="card-text">Start: <%= booking.start_date %></p>
-          <p class="card-text">Until: <%= booking.end_date %></p>
-          <p class="card-text">Status: <%= booking.status %></p>
-          <%= simple_form_for([ booking, @review ]) do |f| %>
-            <%= f.input :content, as: :text %>
-            <%= f.button :submit %>
+          <p class="card-text">Starts on <%= booking.start_date %></p>
+          <p class="card-text">Until <%= booking.end_date %></p>
+          <% if booking.status == "accepted" %>
+          <span class="badge badge-success"><%= booking.status %></span>
+          <% else %>
+          <span class="badge badge-secondary"><%= booking.status %></span>
+          <% end %>
+          <% if booking.status == "accepted" %>
+            <%= simple_form_for([ booking, @review ]) do |f| %>
+              <p> Leave a review :</p>
+              <%= f.input :content, as: :text, label: false %>
+              <%= f.submit "Send review", class:"btn btn-bartender btn-dark-moon w-100" %>
+            <% end %>
           <% end %>
     </div>
       </div>
