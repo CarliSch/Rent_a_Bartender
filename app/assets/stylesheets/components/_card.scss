@@ -2,6 +2,8 @@
  background-color: white;
  color: $gray;
  border-radius: 16px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ margin: 20px;
 }
 
 .card:hover {
@@ -188,4 +190,8 @@ h5 {
 
 .bartender-card-august {
   display: flex;
+}
+
+.booking-card{
+  margin: 50px;
 }
