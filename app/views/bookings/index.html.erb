@@ -28,6 +28,7 @@
           <p class="card-text">Start: <%= request.start_date %></p>
           <p class="card-text">Until: <%= request.end_date %></p>
           <p class="card-text">Status: <%= request.status %></p>
+          <p class="card-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
           <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", remote: true%>
           <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
         </div>
