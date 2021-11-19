@@ -21,7 +21,7 @@
   <div class="cards">
     <% if @my_bookings %>
     <% @my_bookings.each do |request| %>
-      <div class="card" id="booking-<%= request.id %>">
+      <div class="card" id="<%= request.id %>">
         <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
         <div class="card-body">
           <h5 class="card-title"><%= request.bartender.user.first_name %></p></h5>
