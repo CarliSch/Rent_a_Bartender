@@ -3,7 +3,11 @@
   <div id="bartenders-show">
     <div class="row justify-content-center">
       <div class="card-trip">
-        <%= image_tag 'bartender_show.jpg' %>
+          <% if @bartender.photo.attached? %>
+                  <%= cl_image_tag @bartender.photo.key, class:"d-block h-100 "  %>
+                <% else %>
+                  <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"d-block h-100 "%>
+                <% end %>
         <div class="card-trip-infos">
           <div>
             <h2><%= @bartender.user.first_name %></h2>
@@ -36,3 +40,4 @@
         <h3>Description</h3>
         <%= @bartender.description %>
       </div>
+      <%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded"%>
