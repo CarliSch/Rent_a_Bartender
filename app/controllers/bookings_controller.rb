@@ -2,12 +2,18 @@ class BookingsController < ApplicationController
 
   def index
     # @bookings = Booking.all
+    @review = Review.new
     @host = current_user.bartenders.any?
     @bookings = current_user.bookings
     if @host
       @my_requests = current_user.bartenders
       @my_bookings = Booking.where(bartender_id: @my_requests.pluck(:id))
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @review = Review.new
   end
 
   def new
