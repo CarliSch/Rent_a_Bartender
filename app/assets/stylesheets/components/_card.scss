@@ -193,5 +193,15 @@ h5 {
 }
 
 .booking-card{
-  margin: 50px;
-}
+  margin: 40px;
+  
+.card-review {
+  border-radius: 8px;
+  width: 980px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  }
