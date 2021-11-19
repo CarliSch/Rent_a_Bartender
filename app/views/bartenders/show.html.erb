@@ -2,11 +2,11 @@
   <div id="bartenders-show">
     <div class="row justify-content-center">
       <div class="card-trip">
-        <img src="images/drink">
+        <%= image_tag 'bartender_show.jpg' %>
         <div class="card-trip-infos">
           <div>
             <h2><%= @bartender.user.first_name %></h2>
-            <%= @bartender.description %>
+            <%= @bartender.city %>
           </div>
           <h2 class="card-trip-pricing"><%= @bartender.city %></h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
@@ -16,16 +16,16 @@
     <div class="bartender-card-august">
       <div>
         <div class="card-product">
-          <img src="drink.jpg" />
+          <%= image_tag 'drink.jpg' %>
           <div class="card-product-infos">
-            <h2>Product name</h2>
+            <h2>Pink bitch</h2>
             <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
         <div class="card-product">
-          <img src="drink.jpg" />
+          <%= image_tag 'drink.jpg' %>
           <div class="card-product-infos">
-            <h2>Product name</h2>
+            <h2>Devils viagra</h2>
             <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
