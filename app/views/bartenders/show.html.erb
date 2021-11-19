@@ -16,8 +16,11 @@
             <%= @bartender.city %>
           </div>
           <h2 class="card-trip-pricing"><%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded"%></h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
+          <% if @bartender.user.photo.attached? %>
+            <%= cl_image_tag @bartender.user.photo.key, class: "card-trip-user avatar-bordered" %>
+          <% else %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/AugustWanger", class: "card-trip-user avatar-bordered" %>
+          <% end %>
       </div>
     </div>
     <div class="bartender-card-august">
@@ -42,3 +45,4 @@
         <h3>Description</h3>
         <%= @bartender.description %>
       </div>
+      <%= link_to "Back to bartenders", bartenders_path %>
