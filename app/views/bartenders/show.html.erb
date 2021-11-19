@@ -15,7 +15,7 @@
             <h2><%= @bartender.user.first_name %></h2>
             <%= @bartender.city %>
           </div>
-          <h2 class="card-trip-pricing"><%= @bartender.city %></h2>
+          <h2 class="card-trip-pricing"><%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded"%></h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
       </div>
@@ -42,4 +42,3 @@
         <h3>Description</h3>
         <%= @bartender.description %>
       </div>
-      <%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded"%>
