@@ -1,5 +1,6 @@
-<div class="container mt-5">
-    <div class="headers"><h1>My bookings:</h1></div>
+<div class="container mt-5 justify-content-center">
+<div class="booking-card">
+    <div class="headers"><h1>My bookings</h1></div>
   <div class="cards">
     <% @bookings.each do |booking| %>
       <div class="card">
@@ -21,7 +22,9 @@
       </div>
     <% end %>
   </div>
-  <div class="headers"><h1 class=mt-4>My booking requests:</h1></div>
+  </div>
+<div class="booking-card">
+  <div class="headers"><h1 class=mt-4>My booking requests</h1></div>
   <div class="cards">
     <% if @my_bookings %>
     <% @my_bookings.each do |request| %>
@@ -31,16 +34,17 @@
           <h5 class="card-title"><%= request.bartender.user.first_name %></p></h5>
           <p class="card-text">Start: <%= request.start_date %></p>
           <p class="card-text">Until: <%= request.end_date %></p>
-          <p class="card-text">Status: <%= request.status %></p>
           <p class="card-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
+          <p class="card-text">Status: <%= request.status %></p>
           <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", remote: true%>
           <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
         </div>
       </div>
       <% end %>
     <% else %>
-    no bookings yet
+    No bookings yet
     <% end %>
   </div>
+</div>
 </div>
 <%= link_to "Back to all Bartenders", bartenders_path, class: "btn btn-primary w-20 btn-bartender py-" %>
