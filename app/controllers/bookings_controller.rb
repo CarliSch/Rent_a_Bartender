@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @booking.status = "accepted"
     @booking.save
-    redirect_to bookings_path
+    redirect_to bookings_path(anchor: "booking-#{@booking.id}")
   end
 
   def reject
