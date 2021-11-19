@@ -1,11 +1,13 @@
 .card {
  background-color: white;
  color: $gray;
+ border-radius: 16px;
 }
 
 .card:hover {
   transform: scale(1.03);
 }
+
 
 .cards {
   display: grid;
@@ -18,7 +20,9 @@ h5 {
 }
 
 .card-img-top {
-  height: 200px;
+  height: 300px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .button-80 {
