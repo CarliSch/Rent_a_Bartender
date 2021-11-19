@@ -13,7 +13,11 @@
           <p class="card-text">Start: <%= booking.start_date %></p>
           <p class="card-text">Until: <%= booking.end_date %></p>
           <p class="card-text">Status: <%= booking.status %></p>
-        </div>
+          <%= simple_form_for([ booking, @review ]) do |f| %>
+            <%= f.input :content, as: :text %>
+            <%= f.button :submit %>
+          <% end %>
+    </div>
       </div>
     <% end %>
   </div>

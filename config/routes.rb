@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :bartenders, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index] do
+    resources :reviews, only: :create
+  end
   patch "/accept", to: "bookings#accept", as: :accept
   patch "/reject", to: "bookings#reject", as: :reject
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

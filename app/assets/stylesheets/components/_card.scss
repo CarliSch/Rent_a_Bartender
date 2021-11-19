@@ -189,3 +189,17 @@ h5 {
 .bartender-card-august {
   display: flex;
 }
+
+.card-review {
+  border-radius: 8px;
+  width: 980px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 60px;
+}

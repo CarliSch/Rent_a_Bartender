@@ -42,3 +42,12 @@
         <h3>Description</h3>
         <%= @bartender.description %>
       </div>
+    </div>
+    <div class="card-review">
+      <h2>Reviews</h2>
+        <% @bartender.reviews.each do |review| %>
+          <%= review.content %>
+        <% end %>
+    </div>
+  </div>
+</div>
