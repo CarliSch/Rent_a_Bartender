@@ -1,5 +1,5 @@
 .card {
- background-color: rgb(218, 211, 211);
+ background-color: white;
  color: $gray;
 }
 
@@ -15,6 +15,10 @@
 
 h5 {
   color: $gray;
+}
+
+.card-img-top {
+  height: 200px;
 }
 
 .button-80 {
@@ -82,9 +86,6 @@ h5 {
   color: $gray;
   width: 100%;
   height: 100%;
-}
-
-.booking-card {
   position: relative;
 }
 
