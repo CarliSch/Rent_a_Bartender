@@ -13,7 +13,7 @@
             <% if bartender.photo.attached? %>
               <%= cl_image_tag bartender.photo.key, class:"w-100 card-img-top" %>
             <% else %>
-                <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"w-100 card-img-top "%>
+                <%= image_tag "bartender_show.jpg" , :alt => "Close picture of bottles", class:"w-100 card-img-top "%>
             <% end %>
           <div class="p-4">
             <h5 class="mb-0"><%= bartender.user.first_name %></h5>
