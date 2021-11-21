@@ -2,17 +2,25 @@
  background-color: white;
  color: $gray;
  border-radius: 16px;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card:hover {
   transform: scale(1.03);
 }
 
+.card-home {
+ background-color: white;
+ color: $gray;
+ border-radius: 16px;
+ width: 275px;
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 24px;
+  grid-gap: 16px;
+  margin-bottom: 40px;
 }
 
 h5 {
@@ -149,6 +157,7 @@ h5 {
   margin-top: 10px;
   width: 600px;
   margin-left: 60px;
+  border-radius: 4px;
 }
 
 .card-product img {
@@ -183,7 +192,16 @@ h5 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+.card-august h3 {
   text-align: center;
+  text-decoration: 1px underline $gray;
+}
+
+.card-august p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .bartender-card-august {
@@ -197,9 +215,19 @@ h5 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-left: 10px;
   margin-top: 10px;
-  text-align: center;
   flex-basis: 33.333%;
   flex-grow: 0;
   flex-shrink: 0;
   margin-left: 60px;
+}
+
+.card-review h2 {
+  text-align: center;
+  text-decoration: 1px underline $gray;
+}
+
+.card-review p {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 25px;
 }

@@ -1,5 +1,9 @@
+<div class="headers">
+  <h1>My <strong>bookings</strong></h1>
+</div>
+
 <div class="container mt-5">
-    <div class="headers"><h1>My bookings:</h1></div>
+
   <div class="cards">
     <% @bookings.each do |booking| %>
       <div class="card">
@@ -21,7 +25,11 @@
       </div>
     <% end %>
   </div>
-  <div class="headers"><h1 class=mt-4>My booking requests:</h1></div>
+</div>
+  <div class="headers">
+    <h1 class=mt-4>My <strong>booking</strong> requests</h1>
+  </div>
+<div class="container">
   <div class="cards">
     <% @my_bookings.each do |request| %>
       <div class="card">
