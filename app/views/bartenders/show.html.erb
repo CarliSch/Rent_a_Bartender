@@ -15,12 +15,17 @@
             <h2><%= @bartender.user.first_name %></h2>
             <%= @bartender.city %>
           </div>
+<<<<<<< HEAD
+          <h2 class="card-trip-pricing"><%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"mt-1 col btn btn-dark-moon btn-rounded"%></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+=======
           <h2 class="card-trip-pricing"><%= link_to "Book now!", new_bartender_booking_path(@bartender), class:"col btn btn-dark-moon btn-rounded btn-bartender"%></h2>
             <% if @bartender.user.photo.attached? %>
             <%= cl_image_tag @bartender.user.photo.key, class:"card-trip-user avatar-bordered" %>
             <% else %>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
             <% end %>
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
         </div>
       </div>
     </div>
@@ -29,14 +34,14 @@
         <div class="card-product">
           <%= image_tag 'drink.jpg' %>
           <div class="card-product-infos">
-            <h2>Pink bitch</h2>
+            <h2>Pina colada</h2>
             <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
         <div class="card-product">
           <%= image_tag 'drink.jpg' %>
           <div class="card-product-infos">
-            <h2>Devils viagra</h2>
+            <h2>Crazy russian</h2>
             <p>Product description with <strong>relevant info</strong> only.</p>
           </div>
         </div>
@@ -44,13 +49,13 @@
       </div>
       <div class="card-august">
         <h3>Description</h3>
-        <%= @bartender.description %>
+        <p><%= @bartender.description %></p>
       </div>
     </div>
     <div class="card-review">
       <h2>Reviews</h2>
         <% @bartender.reviews.each do |review| %>
-          <%= review.content %>
+          <p><%= review.content %></p>
         <% end %>
     </div>
   </div>

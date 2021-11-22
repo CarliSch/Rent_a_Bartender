@@ -7,7 +7,42 @@
   color: $red;
 }
 
+<<<<<<< HEAD
+.headers {
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline black;
+  background-color: white;
+  height: 150px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.headers h1 {
+  color: black;
+  margin-top: 25px;
+  font-size: 50px;
+}
+
+.headers h1 strong {
+  color: $red;
+}
+
+.headers-homepage {
+  height: 150px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: $white;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+
+.headers-homepage h1 {
+  color: $black;
+=======
 .headers{
   text-align: center;
   margin: 15px;
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
 }

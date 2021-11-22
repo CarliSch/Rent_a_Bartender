@@ -2,19 +2,30 @@
  background-color: white;
  color: $gray;
  border-radius: 16px;
+<<<<<<< HEAD
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+=======
  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  margin: 20px;
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
 }
 
 .card:hover {
   transform: scale(1.03);
 }
 
+.card-home {
+ background-color: white;
+ color: $gray;
+ border-radius: 16px;
+ width: 275px;
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 24px;
+  grid-gap: 16px;
+  margin-bottom: 40px;
 }
 
 h5 {
@@ -151,6 +162,7 @@ h5 {
   margin-top: 10px;
   width: 600px;
   margin-left: 60px;
+  border-radius: 4px;
 }
 
 .card-product img {
@@ -185,7 +197,16 @@ h5 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+.card-august h3 {
   text-align: center;
+  text-decoration: 1px underline $gray;
+}
+
+.card-august p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .bartender-card-august {
@@ -201,8 +222,29 @@ h5 {
   width: 980px;
   background-color: #FFFFFF;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+<<<<<<< HEAD
+  margin-left: 10px;
+  margin-top: 10px;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 60px;
+}
+
+.card-review h2 {
+  text-align: center;
+  text-decoration: 1px underline $gray;
+}
+
+.card-review p {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 25px;
+}
+=======
   text-align: center;
   flex-basis: 33.333%;
   flex-grow: 0;
   flex-shrink: 0;
   }
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
