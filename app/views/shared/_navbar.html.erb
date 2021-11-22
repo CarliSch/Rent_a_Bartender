@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  
+
   <%= link_to root_path, class: "navbar-brand" do %>
     <i class="fas fa-glass-martini-alt" id="icon-navbar">Rent a bartender</i>
   <% end %>
@@ -21,7 +21,11 @@
           </button>
         </li>
         <li class="nav-item dropdown mt-1 ml-1">
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% else %>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/AugustWanger", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Profile", "#", class: "dropdown-item" %>
             <%= link_to "Settings", "#", class: "dropdown-item" %>

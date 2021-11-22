@@ -2,7 +2,12 @@
  background-color: white;
  color: $gray;
  border-radius: 16px;
+<<<<<<< HEAD
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+=======
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ margin: 20px;
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
 }
 
 .card:hover {
@@ -208,11 +213,16 @@ h5 {
   display: flex;
 }
 
+.booking-card{
+  margin: 40px;
+}
+
 .card-review {
   border-radius: 8px;
   width: 980px;
   background-color: #FFFFFF;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+<<<<<<< HEAD
   margin-left: 10px;
   margin-top: 10px;
   flex-basis: 33.333%;
@@ -231,3 +241,10 @@ h5 {
   margin-right: 25px;
   font-size: 25px;
 }
+=======
+  text-align: center;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  }
+>>>>>>> 138806491f6bf4619f51717e0ca0d8c424695c04
